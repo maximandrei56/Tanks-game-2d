@@ -1,5 +1,32 @@
+<<<<<<< HEAD
 #include "MainWindow.h"
 #include "Graphics.h"
+=======
+/******************************************************************************************
+*	Chili DirectX Framework Version 16.07.20											  *
+*	MainWindow.cpp																		  *
+*	Copyright 2016 PlanetChili.net <http://www.planetchili.net>							  *
+*																						  *
+*	This file is part of The Chili DirectX Framework.									  *
+*																						  *
+*	The Chili DirectX Framework is free software: you can redistribute it and/or modify	  *
+*	it under the terms of the GNU General Public License as published by				  *
+*	the Free Software Foundation, either version 3 of the License, or					  *
+*	(at your option) any later version.													  *
+*																						  *
+*	The Chili DirectX Framework is distributed in the hope that it will be useful,		  *
+*	but WITHOUT ANY WARRANTY; without even the implied warranty of						  *
+*	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the						  *
+*	GNU General Public License for more details.										  *
+*																						  *
+*	You should have received a copy of the GNU General Public License					  *
+*	along with The Chili DirectX Framework.  If not, see <http://www.gnu.org/licenses/>.  *
+******************************************************************************************/
+#include "MainWindow.h"
+#include "Resource.h"
+#include "Graphics.h"
+#include "ChiliException.h"
+>>>>>>> origin/master
 #include "Game.h"
 #include <assert.h>
 
@@ -12,6 +39,12 @@ MainWindow::MainWindow( HINSTANCE hInst,wchar_t * pArgs )
 	WNDCLASSEX wc = { sizeof( WNDCLASSEX ),CS_CLASSDC,_HandleMsgSetup,0,0,
 		hInst,nullptr,nullptr,nullptr,nullptr,
 		wndClassName,nullptr };
+<<<<<<< HEAD
+=======
+	wc.hIconSm = (HICON)LoadImage( hInst,MAKEINTRESOURCE( IDI_APPICON ),IMAGE_ICON,16,16,0 );
+	wc.hIcon = (HICON)LoadImage( hInst,MAKEINTRESOURCE( IDI_APPICON ),IMAGE_ICON,32,32,0 );
+	wc.hCursor = LoadCursor( nullptr,IDC_ARROW );
+>>>>>>> origin/master
 	RegisterClassEx( &wc );
 
 	// create window & get hWnd
@@ -21,7 +54,11 @@ MainWindow::MainWindow( HINSTANCE hInst,wchar_t * pArgs )
 	wr.top = 100;
 	wr.bottom = Graphics::ScreenHeight + wr.top;
 	AdjustWindowRect( &wr,WS_CAPTION | WS_MINIMIZEBOX | WS_SYSMENU,FALSE );
+<<<<<<< HEAD
 	hWnd = CreateWindow( wndClassName,L"Tanks",
+=======
+	hWnd = CreateWindow( wndClassName,L"Chili DirectX Framework",
+>>>>>>> origin/master
 		WS_CAPTION | WS_MINIMIZEBOX | WS_SYSMENU,
 		wr.left,wr.top,wr.right - wr.left,wr.bottom - wr.top,
 		nullptr,nullptr,hInst,this );

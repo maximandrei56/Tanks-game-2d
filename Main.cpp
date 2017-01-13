@@ -20,6 +20,10 @@
 ******************************************************************************************/
 #include "MainWindow.h"
 #include "Game.h"
+<<<<<<< HEAD
+=======
+#include "ChiliException.h"
+>>>>>>> origin/master
 
 int WINAPI wWinMain( HINSTANCE hInst,HINSTANCE,LPWSTR pArgs,INT )
 {
