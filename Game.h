@@ -1,80 +1,75 @@
-#include "Graphics.h"
-#include <queue>
+#pragma once
 
-struct el {
-	int x, y;
-};
+#include "Keyboard.h"
+#include "Graphics.h"
+#include "Mouse.h"
+
 class Game
 {
 public:
-	
+
 	Game( class MainWindow& wnd );
+	Game( const Game& ) = delete;
+	Game& operator=( const Game& ) = delete;
 	void Go();
 private:
 	void ComposeFrame();
 	void UpdateTank1();
 	void UpdateTank2();
-	void UpdateBot();
-	void Realtank(int l , int h,int dir,int x,int y,int z,int owner);
-	void Drawmeniu(int x,int y);
-	void Drawnewgame(int x, int y);
-	bool Valid(int x, int y); 
-	void Proiectil(); 
-	void Lee();
+	//void UpdateBot();
+	void Realtank(int l , int h,int dir,int x,int y,int z);
+	void Realtank2(int l, int h, int dir, int x, int y, int z);
+	bool Valid(int x, int y);
+	void Proiectil();
 
 private:
 	MainWindow& wnd;
 	Graphics gfx;
+	void DrawRunaDamage(int x, int y);
 	void DrawRune(int x, int y);
-	void Gameover(int x,int y); 
+	void Gameover(int x,int y);
 	void DrawMesajviata(int x, int y);
-	void Drawpause(int x, int y);
+	void DrawViata(int x, int y,int r,int b,int g);
 	void Drawproiectil(int x, int y,int r,int b,int g);
-	void Drawwinner(int x, int y);
-	void Drawp1(int x, int y);
-	void Drawp2(int x, int y);
-	void Drawbots(int x, int y);
-	void Drawzid(int x, int y);
-	bool Tank1(int i, int j);
-	int Modul(int x);
+	void Updatezid();
+	void Labirint();
+	int dxd = rand() % 630;
+	int dyd = rand() % 550;
 	int rx = rand() % 630;
 	int ry = rand() % 550;
-
+	//int coordonate[650][550];
+	
 private:
-	int x = 610, y = 530; 
+	int x = 100, y = 400;
 	int x2 = 100, y2 = 100;
-	int x3 = 350, y3 = 130;
+	int x3 = 550, y3 = 130;
+	int damage = 1;
+	int damage1 = 1;
+	int damage2 = 1;
 	int viata = 3;
-	int playing = true;
-	int pauza = false;
 	int viata2 = 3;
 	int viata3 = 3;
-	int val = 1;
+	bool zid[800][800];
 	int n1 = 0;
 	int n2 = 0;
 	int n3 = 0;
-	int dir = 0; 
+	int dir = 0;
 	int dir2 = 0;
 	int dir3 = 0;
 	int speed = 2;
 	int speed2 = 2;
-	int tip_joc = 0;
-	int nr_proiectile = 0; 
-	const int lins = 650; 
+	int nr_proiectile = 0;
+	const int lins = 650;
 	const int cols = 590;
-	int p[10][3]; 
-	int proiectil[1000][5];
-	std::queue<el>Q;
-	int Zid[10][2];
+	int p[10][3];
+	int proiectil[10000][5];
+
+	bool eaten[10];
 	bool ok = false;
-	int di[4] = { -1,1,0,0 };
-	int dj[4] = { 0,0,1,-1 };
 	void Initializari();
-	void Border(); 
-	void Drawimages(); 
-	int dist[400][400];
-	short tr[400][400];
-	bool Valid2(int i, int j,int i2,int j2);
+	void Ok(int x, int y);
+	void Border();
+	void Drawimages();
+	void RunaDamage(int x, int y, int q);
 	void Runa_viata(int i,int j,int q);
 };
-
