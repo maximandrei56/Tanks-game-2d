@@ -1,0 +1,7 @@
+﻿  Game.cpp
+d:\floatout 2\flat out 2\proiect directx\engine\game.cpp(187): warning C4101: 'xi': unreferenced local variable
+d:\floatout 2\flat out 2\proiect directx\engine\game.cpp(187): warning C4101: 'yi': unreferenced local variable
+d:\floatout 2\flat out 2\proiect directx\engine\game.cpp(187): warning C4101: 'j': unreferenced local variable
+d:\floatout 2\flat out 2\proiect directx\engine\game.cpp(187): warning C4101: 'i': unreferenced local variable
+  Engine.vcxproj -> D:\floatout 2\Flat Out 2\Proiect directx\x64\Debug\Engine.exe
+  Engine.vcxproj -> D:\floatout 2\Flat Out 2\Proiect directx\x64\Debug\Engine.pdb (Partial PDB)

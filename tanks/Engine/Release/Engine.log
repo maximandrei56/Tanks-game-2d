@@ -1,0 +1,12 @@
+﻿  Game.cpp
+  Main.cpp
+  MainWindow.cpp
+Game.cpp(89): warning C4101: 'j': unreferenced local variable
+Game.cpp(89): warning C4101: 'i': unreferenced local variable
+  Generating code
+  14 of 639 functions ( 2.2%) were compiled, the rest were copied from previous compilation.
+    2 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Engine.vcxproj -> D:\Chili Framework 2016\Release\Engine.exe
+  Engine.vcxproj -> D:\Chili Framework 2016\Release\Engine.pdb (Full PDB)
